@@ -57,7 +57,9 @@ mongoose.connect(DB,{
 })
 
 //Server
-app.listen(8080, ()=>{
 
-    console.log('server is running http://localhost:8080');
+const port = process.env.PORT;
+
+app.listen(port, ()=>{
+    console.log('server is running');
 })
